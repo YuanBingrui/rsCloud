@@ -8,6 +8,12 @@ function showToast(title,icon,image){
   })
 }
 
+function showLoading(title){
+  wx.showLoading({
+    title: title,
+  })
+}
+
 function showModal(){
   wx.showModal({
     title: '',
@@ -22,5 +28,6 @@ function showModal(){
 
 module.exports = {
   showToast: showToast,
+  showLoading: showLoading,
   showModal: showModal
 }

@@ -1,8 +1,5 @@
 @import "../common/iconfont/iconfont.wxss";
 
-/* .login-container{
-  padding: 100rpx;
-} */
 .logoBox{
   text-align: center;
   padding: 100rpx 0;

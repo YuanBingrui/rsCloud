@@ -5,7 +5,6 @@ page {
   padding: 20rpx 0 20rpx 0;
   background-color: #fff;
 }
-
 .itemDetailContent{
   margin: 15rpx 0;
 }
@@ -13,24 +12,26 @@ page {
   border-top: 1px #D8D8D8 solid;
   border-bottom: 1px #D8D8D8 solid;
 }
-.oneItemDetail{
-  padding: 0 30rpx;
+.oneItemDetail {
+  padding: 20rpx 30rpx;
+  position: relative;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  position: relative;
-  height: 80rpx;
 }
-.oneItemDetail::before{
-  border-top: 1rpx solid #D8D8D8;
-  color: #D8D8D8;
-  content: "";
+.oneItemDetail:before {
+  content: " ";
   position: absolute;
   left: 30rpx;
-  top: 80rpx; 
+  top: 0;
   right: 30rpx;
   height: 1px;
+  border-top: 0.5rpx solid #D8D8D8;
+  color: #D8D8D8;
+}
+.oneItemDetail:first-child:before {
+  display: none;
 }
 .itemLabel{
   width: 40%;

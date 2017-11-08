@@ -1,3 +1,4 @@
 {
-  "navigationBarTitleText": "电子公告"
+  "navigationBarTitleText": "电子公告",
+  "enablePullDownRefresh": true
 }

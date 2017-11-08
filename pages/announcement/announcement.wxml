@@ -1,21 +1,22 @@
-<import src="../common/search/search.wxml" />
-
 <view class="section">
-  <template is="search" data="{{searchStyle}}"/>
-  <block wx:for="{{noticeList}}" wx:key="{{item.id}}">
-    <navigator url="../announcement-detail/announcement-detail?title={{item.value}}" class="navigator">
+  <view class="searchBox" style="box-shadow:{{searchStyle}}">
+    <icon type="search" size="18"/>
+    <input placeholder="搜索" bindinput="queryAnnouncement" bindfocus="addSearchBoxStyle" bindblur="delSearchBoxStyle"/>
+  </view>
+  <block wx:for="{{announcementList}}" wx:key="{{item.GGXX_GGID.value}}">
+    <view class="navigator" bindtap="goToAnnouncementDetail" data-item="{{item}}">
       <view class="itemIcon">
         <i class="icon-announcement"></i>
       </view>
       <view class="itemContent">
         <view class="itemTitleBox">
-          <view class="startBox">{{item.value}}</view>
+          <view class="startBox">{{item.GGXX_GGBT.value}}</view>
           <view class="endBox">
-            <view class="dateBox">{{noticeDate}}</view>
+            <view class="dateBox">{{item.GGXX_WHR.value}}</view>
           </view>
         </view>
-        <view class="itemSubTitleBox">{{item.subvalue}}</view>
+        <view class="itemSubTitleBox">{{item.GGXX_FBSJ.value}}</view>
       </view>
-    </navigator>  
+    </view>  
   </block>
 </view>

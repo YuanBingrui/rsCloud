@@ -28,10 +28,11 @@ Page({
       url: '../todo/todo'
     })
   },
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
   
+  onShareAppMessage: function () {
+    return {
+      title: '罗想云',
+      path: '/pages/login/login'
+    }
   }
 })

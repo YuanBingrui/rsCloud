@@ -55,6 +55,9 @@ Page({
   },
 
   onShareAppMessage: function () {
-  
+    return {
+      title: '罗想云',
+      path: '/pages/login/login'
+    }
   }
 })

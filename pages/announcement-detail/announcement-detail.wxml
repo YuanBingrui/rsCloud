@@ -1,34 +1,38 @@
+<import src="../../utils/wxParse/wxParse.wxml"/>
+
 <view class="section">
-  <view class="noticeHeader">---{{noticeTitle}}---</view>
+  <view class="noticeHeader">---{{announcementItem.GGXX_GGBT.value}}---</view>
   <view class="noticeContent">
-    <text space="nbsp">{{noticeContent}}</text>
+    <!-- <text space="nbsp"> -->
+      <template is="wxParse" data="{{wxParseData:announcementContent.nodes}}"/>
+    <!-- </text> -->
   </view>
 </view>
 <view class="section itemDetailContent">
   <view class="itemDetailBox">
     <view class="oneItemDetail">
       <view class="itemLabel">公告分类</view>
-      <view class="itemDetailValue">{{noticekind}}</view>
+      <view class="itemDetailValue">{{announcementItem.GGFL_FLMC.value}}</view>
     </view>
     <view class="oneItemDetail">
       <view class="itemLabel">保留天数</view>
-      <view class="itemDetailValue">{{staydays}}</view>
+      <view class="itemDetailValue">{{announcementItem.GGXX_BLTS.value}}</view>
     </view>
     <view class="oneItemDetail">
       <view class="itemLabel">发布人</view>
-      <view class="itemDetailValue">{{publisher}}</view>
+      <view class="itemDetailValue">{{announcementItem.RYXX_MC.value}}</view>
     </view>
     <view class="oneItemDetail">
       <view class="itemLabel">发布时间</view>
-      <view class="itemDetailValue">{{publishdate}}</view>
+      <view class="itemDetailValue">{{announcementItem.GGXX_FBSJ.value}}</view>
     </view>
     <view class="oneItemDetail">
       <view class="itemLabel">维护人</view>
-      <view class="itemDetailValue">{{maintain}}</view>
+      <view class="itemDetailValue">{{announcementItem.GGXX_WHR.value}}</view>
     </view>
     <view class="oneItemDetail">
       <view class="itemLabel">维护时间</view>
-      <view class="itemDetailValue">{{maintaindate}}</view>
+      <view class="itemDetailValue">{{announcementItem.GGXX_WHSJ.value}}</view>
     </view>
   </view>
 </view>
