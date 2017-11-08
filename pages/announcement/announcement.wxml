@@ -1,0 +1,21 @@
+<import src="../common/search/search.wxml" />
+
+<view class="section">
+  <template is="search" data="{{searchStyle}}"/>
+  <block wx:for="{{noticeList}}" wx:key="{{item.id}}">
+    <navigator url="../announcement-detail/announcement-detail?title={{item.value}}" class="navigator">
+      <view class="itemIcon">
+        <i class="icon-announcement"></i>
+      </view>
+      <view class="itemContent">
+        <view class="itemTitleBox">
+          <view class="startBox">{{item.value}}</view>
+          <view class="endBox">
+            <view class="dateBox">{{noticeDate}}</view>
+          </view>
+        </view>
+        <view class="itemSubTitleBox">{{item.subvalue}}</view>
+      </view>
+    </navigator>  
+  </block>
+</view>

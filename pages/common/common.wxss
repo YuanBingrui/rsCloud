@@ -1,0 +1,43 @@
+page {
+  background-color: #eeeeee;
+}
+.section{
+  padding: 20rpx 0 20rpx 0;
+  background-color: #fff;
+}
+
+.itemDetailContent{
+  margin: 15rpx 0;
+}
+.itemDetailBox{
+  border-top: 1px #D8D8D8 solid;
+  border-bottom: 1px #D8D8D8 solid;
+}
+.oneItemDetail{
+  padding: 0 30rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  height: 80rpx;
+}
+.oneItemDetail::before{
+  border-top: 1rpx solid #D8D8D8;
+  color: #D8D8D8;
+  content: "";
+  position: absolute;
+  left: 30rpx;
+  top: 80rpx; 
+  right: 30rpx;
+  height: 1px;
+}
+.itemLabel{
+  width: 40%;
+}
+.itemDetailValue{
+  color: #999;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

@@ -1,0 +1,5 @@
+/* pages/announcement/announcement.wxss */
+@import "../common/search/search.wxss";
+@import "../common/common.wxss";
+@import "../common/item.wxss";
+@import "../common/iconfont/iconfont.wxss";

@@ -1,0 +1,6 @@
+<template name="search">
+  <view class="searchBox" style="box-shadow:{{searchStyle}}">
+    <icon type="search" size="18"/>
+    <input placeholder="搜索" bindfocus="addSearchBoxStyle" bindblur="delSearchBoxStyle"/>
+  </view>
+</template>

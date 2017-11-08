@@ -1,0 +1,20 @@
+<view class="container loginContainer">
+  <view class="logoBox">
+    <image src="../../image/logo.png" class="logoImg"></image>
+  </view>
+  <form bindsubmit="submit">
+    <view class="formBox">
+      <view class="inputBox">
+        <i class="icon icon-password"></i>
+        <input name="username" focus placeholder="请输入用户名"/>
+      </view>
+      <view class="inputBox">
+        <i class="icon icon-account"></i>
+        <input name="password" password placeholder="请输入密码"/>
+      </view>
+      <view class="btnBox">
+        <button plain formType="submit" loading="{{loading}}">登录</button>
+      </view>
+    </view>  
+  </form>
+</view>

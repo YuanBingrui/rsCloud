@@ -1,0 +1,43 @@
+<view class="section">
+  <view class="toolListBox">
+    <navigator url="../todo/todo">
+      <view class="toolItemBox">
+        <view class="toolIconBox"><i class="toolIcon icon-todo"></i></view>
+        <view class="toolWord">待办事宜</view>
+      </view>
+    </navigator>
+    <navigator url="../worklog/worklog">
+      <view class="toolItemBox">
+        <view class="toolIconBox"><i class="toolIcon icon-worklog"></i></view>
+        <view class="toolWord">工作日志</view>
+      </view>  
+    </navigator>
+    <navigator url="../announcement/announcement">
+      <view class="toolItemBox">
+        <view class="toolIconBox"><i class="toolIcon icon-announcement"></i></view>
+        <view class="toolWord">电子公告</view>
+      </view>
+    </navigator>
+    <navigator url="../about/about">
+      <view class="toolItemBox">
+        <view class="toolIconBox"><i class="toolIcon icon-about"></i></view>
+        <view class="toolWord">关于应用</view>
+      </view>
+    </navigator>
+  </view>
+</view>
+<view class="section todoItemBox" bindtap="goTodo">
+  <view class="itemHeader">
+    <view class="itemHeaderIcon">
+      <i class="toolIcon icon-todo"></i>
+    </view>
+    <view class="itemHeaderWord">
+      <view class="itemHeaderWordDes">待办事宜</view>
+      <view class="itemHeaderWordDate">更新时间{{today}}</view> 
+    </view>
+  </view>
+  <view class="itemContent">
+    您有{{itemNum}}条待办事宜需要处理，赶紧来看一下吧！
+  </view>
+  <view class="viewBtn">立即查看</view>
+</view>

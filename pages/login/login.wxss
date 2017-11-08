@@ -1,0 +1,41 @@
+@import "../common/iconfont/iconfont.wxss";
+
+/* .login-container{
+  padding: 100rpx;
+} */
+.logoBox{
+  text-align: center;
+  padding: 100rpx 0;
+}
+.logoImg{
+  width: 150rpx;
+  height: 150rpx;
+}
+.inputBox{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 40rpx 80rpx;
+  border-bottom: 1px #ccc solid;
+  padding:0 8rpx;
+}
+.inputBox input{
+  font-size: 30rpx;
+  margin-left: 8rpx;
+  width: 100%; 
+}
+.btnBox{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 70rpx; 
+}
+.btnBox button{
+  border: 1px #0074d9 solid;
+  color: #0074d9;
+  width:75%;
+  height: 70rpx;
+  line-height: 70rpx;
+  font-size: 30rpx;
+} 

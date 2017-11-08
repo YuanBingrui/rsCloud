@@ -1,0 +1,26 @@
+/* pages/setting/setting.wxss */
+@import "../common/common.wxss";
+
+.accountInfo{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20rpx 10rpx;
+  background-color: #fff;
+  margin: 10rpx 0;
+}
+.avatarImg{
+  width: 80rpx;
+  height: 80rpx;
+}
+.avatarBox{
+  margin-left: 20rpx;
+}
+.nameBox{
+  margin-left: 20rpx;
+}
+.exitBtn{
+  width: 90%;
+  margin-top: 20rpx; 
+}
