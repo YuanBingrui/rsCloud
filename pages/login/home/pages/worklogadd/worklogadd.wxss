@@ -1,0 +1,35 @@
+/* worklogadd.wxss */
+@import "../../../../common/common.wxss";
+
+.itemDetailValue{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+}
+.itemDetailValue input{
+  text-align: right;
+}
+.itemDetailValue image{
+  width: 70rpx;
+  height: 70rpx;
+}
+
+textarea {
+  width: 777rpx;
+  padding: 20rpx 30rpx;
+  color: #999999;
+}
+
+.textareaLabel{
+  margin-top: .77em;
+  margin-bottom: .3em;
+  padding-left: 15px;
+  padding-right: 15px;
+  color: #999999;
+  font-size: 14px;
+}
+
+.btnBox{
+  margin: 30rpx 0;
+}

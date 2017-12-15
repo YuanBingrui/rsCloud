@@ -1,0 +1,91 @@
+<view>
+  <view class="section">
+    <view class="toolbtnBox toolBox"> 
+      <navigator url="pages/todo/todo">
+        <view class="btnBox">
+          <image src="../../../image/icon/todoBtn.png"></image>
+        </view>
+      </navigator>
+      <view class="btnBox">
+        <image src="../../../image/icon/personWork.png"></image>
+      </view>
+      <view class="btnBox">
+        <image src="../../../image/icon/warning.png"></image>
+      </view>
+      <navigator url="pages/notice/notice">
+        <view class="btnBox">
+          <image src="../../../image/icon/announcement.png"></image>
+        </view>
+      </navigator>
+    </view>
+    <view class="toolWordBox toolBox">
+      <view class="wordDesBox">
+        <text>待办事宜</text>
+      </view>
+      <view class="wordDesBox">
+        <text>我的事务</text>
+      </view>
+      <view class="wordDesBox">
+        <text>消息预警</text>
+      </view>
+      <view class="wordDesBox">
+        <text>电子公告</text>
+      </view>
+    </view>
+    <view class="toolbtnBox toolBox">
+      <view class="btnBox">
+        <image src="../../../image/icon/document.png"></image>
+      </view>
+      <navigator url="pages/worklog/worklog">
+        <view class="btnBox">
+          <image src="../../../image/icon/worklog.png"></image>
+        </view>
+      </navigator>
+      <navigator url="pages/about/about">
+        <view class="btnBox">
+          <image src="../../../image/icon/about.png"></image>
+        </view>
+      </navigator>
+      <view class="btnBox" bindtap="logout">
+        <image src="../../../image/icon/exit.png"></image>
+      </view>
+    </view>
+    <view class="toolWordBox toolBox">
+      <view class="wordDesBox">
+        <text>文档中心</text>
+      </view>
+      <view class="wordDesBox">
+        <text>工作日志</text>
+      </view>
+      <view class="wordDesBox">
+        <text>关于应用</text>
+      </view>
+      <view class="wordDesBox">
+        <text>退出登录</text>
+      </view>
+    </view>
+  </view>
+  <view class="section todoItemBox" bindtap="goTodo">
+    <view class="itemHeader">
+      <view class="itemHeaderIcon">
+        <image src="../../../image/icon/todoBtn.png"></image>
+      </view>
+      <view class="itemHeaderWord">
+        <view class="itemHeaderWordDes">待办事宜</view>
+        <view class="itemHeaderWordDate">更新时间{{today}}</view> 
+      </view>
+    </view>
+    <view class="itemContent">
+      您有{{itemNum}}条待办事宜需要处理，赶紧来看一下吧！
+    </view>
+    <view class="viewBtn">立即查看</view>
+    <!-- <block wx:for-items="{{list}}" wx:key="{{item.id}}">
+      <navigator url="pages/todo/todo" class="navigator">
+        <view>{{item.value}}</view>
+        <view>
+          <image src="../../../image/icon/right-arrow.png"></image>
+        </view>
+      </navigator>  
+    </block> -->
+  </view>
+</view>

@@ -1,0 +1,26 @@
+/* worklog.wxss */
+@import "../../../../common/search/search.wxss";
+@import "../../../../common/common.wxss";
+@import "../../../../common/item.wxss";
+
+.searchBox{
+  width: 70%;
+}
+.headerBox{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 20rpx;
+}
+.toolBtnBox{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.toolBtnBox image{
+  width: 50rpx;
+  height: 50rpx;
+  padding: 0 25rpx;
+}

@@ -1,47 +1,23 @@
 {
   "pages": [
     "pages/login/login",
-    "pages/home/home",
-    "pages/todo/todo",
-    "pages/todo-detail/todo-detail",
-    "pages/todo-submit/todo-submit",
-    "pages/worklog/worklog",
-    "pages/worklog-detail/worklog-detail",
-    "pages/worklog-filter/worklog-filter",
-    "pages/announcement/announcement",
-    "pages/announcement-detail/announcement-detail",
-    "pages/about/about",
-    "pages/setting/setting",
-    "pages/todo-persons/todo-persons"
+    "pages/login/home/home",
+    "pages/login/home/pages/todo/todo",
+    "pages/login/home/pages/worklog/worklog",
+    "pages/login/home/pages/about/about",
+    "pages/login/home/pages/worklogdetail/worklogdetail",
+    "pages/login/home/pages/tododetail/tododetail",
+    "pages/login/home/pages/worklogadd/worklogadd",
+    "pages/login/home/pages/worklogfilter/worklogfilter",
+    "pages/login/home/pages/notice/notice",
+    "pages/login/home/pages/noticedetail/noticedetail"
   ],
   "window": {
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
+    "navigationBarBackgroundColor": "#ffffff",
     "navigationBarTitleText": "罗想云",
-    "navigationBarTextStyle": "black"
-  },
-  "tabBar": {
-    "color": "#7A7E83",
-    "selectedColor": "#0074d9",
-    "borderStyle": "black",
-    "backgroundColor": "#ffffff",
-    "list": [
-      {
-        "pagePath": "pages/home/home",
-        "iconPath": "image/home.png",
-        "selectedIconPath": "image/home-selected.png",
-        "text": "首页"
-      },
-      {
-        "pagePath": "pages/setting/setting",
-        "iconPath": "image/setting.png",
-        "selectedIconPath": "image/setting-selected.png",
-        "text": "设置"
-      }
-    ]
-  },
-  "networkTimeout": {
-    "request": 120000
+    "navigationBarTextStyle": "black",
+    "backgroundTextStyle": "light",
+    "backgroundColor": "#F8F8F8"
   },
   "debug": true
 }

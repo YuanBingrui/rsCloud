@@ -1,0 +1,4 @@
+/* notice.wxss */
+@import "../../../../common/search/search.wxss";
+@import "../../../../common/common.wxss";
+@import "../../../../common/item.wxss";

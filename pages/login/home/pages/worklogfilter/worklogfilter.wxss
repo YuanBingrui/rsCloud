@@ -1,0 +1,12 @@
+/* worklogfilter.wxss */
+@import "../../../../common/common.wxss";
+@import "../../../../common/weui.wxss";
+
+.titlebox{
+  font-size: 30rpx;
+  color: #999999;
+  margin-left: 30rpx;
+}
+.btnBox{
+  margin: 30rpx 0;
+}

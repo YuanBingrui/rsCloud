@@ -1,0 +1,92 @@
+/* home.wxss */
+@import "../../common/common.wxss";
+
+.toolBox{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+.toolbtnBox{
+  margin:5% 0 0 0;
+}
+.btnBox{
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+}
+.btnBox image{
+  width: 100%;
+  height: 100%;
+  background-color: #c9ae8c;
+}
+.toolWordBox{
+  margin:5px 0 15px 0;
+}
+.wordDesBox{
+  font-size: 25rpx;
+}
+.todoItemBox{
+  margin-top: 15rpx;
+  padding: 20rpx 0 0 0; 
+}
+.itemHeader{
+  padding: 0 0 0 20rpx;
+  /* border-bottom: 1px #ccccca solid; */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.itemHeaderIcon{
+  display: flex;
+  align-items: center;
+}
+.itemHeaderIcon image{
+  width: 80rpx;
+  height: 80rpx;
+}
+.itemHeaderWord{
+  margin-left: 20rpx;
+}
+.itemHeaderWordDate{
+  font-size: 25rpx;
+  color: #999999;
+}
+.itemContent{
+  margin: 10rpx 0 20rpx 120rpx;
+}
+.viewBtn{
+  background-color: #F8F8F8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30rpx;
+  height: 80rpx;
+  color: #999999;
+}
+/* .navigator {
+  padding: 20rpx 30rpx;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.navigator image{
+  width: 40rpx;
+  height: 40rpx;
+}
+.navigator:before {
+  content: "";
+  position: absolute;
+  left: 30rpx;
+  top: 95rpx;
+  right: 30rpx;
+  height: 1px;
+  border-top: 1rpx solid #D8D8D8;
+  color: #D8D8D8;
+} */

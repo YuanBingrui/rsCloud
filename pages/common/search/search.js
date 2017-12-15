@@ -1,13 +1,13 @@
 // search.js
 function initData(){
-  return '0 0 3rpx 2rpx #0074d9'
+  return '0 0 4rpx 2rpx #999999'
 }
 function addSearchBoxStyle () {
-  return '0 0 7rpx 4rpx #0074d9'
+  return '0 0 10rpx 4rpx #999999'
 }
 
 function  delSearchBoxStyle () {
-  return '0 0 3rpx 2rpx #0074d9'
+  return '0 0 4rpx 2rpx #999999'
 }
 
 module.exports = {

@@ -1,0 +1,22 @@
+/* about.wxss */
+.session{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.centerBox{
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+.topWordBox{
+  margin: 50rpx;
+  color: #999999;
+}
+.imgBox{
+  margin: 50rpx 0;
+}
+.bottomWordBox{
+ 
+}

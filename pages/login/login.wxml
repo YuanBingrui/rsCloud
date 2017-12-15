@@ -1,20 +1,27 @@
-<view class="container loginContainer">
+<view class="errBox" hidden="{{display}}">{{login.errorMessage}}</view>
+<view class="container">
   <view class="logoBox">
     <image src="../../image/logo.png" class="logoImg"></image>
   </view>
-  <form bindsubmit="submit">
-    <view class="formBox">
-      <view class="inputBox">
-        <i class="icon icon-password"></i>
-        <input name="username" focus placeholder="请输入用户名"/>
+  <view class="page-body">
+    <view class="page-section">
+      <view class="weui-cells__title">用户名</view>
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_input">
+          <input class="weui-input" bindinput="getUsername" focus placeholder="请输入用户名"/>
+        </view>
       </view>
-      <view class="inputBox">
-        <i class="icon icon-account"></i>
-        <input name="password" password placeholder="请输入密码"/>
+    </view>
+    <view class="page-section">
+      <view class="weui-cells__title">密码</view>
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_input">
+          <input class="weui-input" bindinput="getPassword" password type="text" placeholder="请输入密码" />
+        </view>
       </view>
-      <view class="btnBox">
-        <button plain formType="submit" loading="{{loading}}">登录</button>
-      </view>
-    </view>  
-  </form>
+    </view>
+    <view class="btn-area">
+      <button type="primary" bindtap="submit" loading="{{loading}}">登录</button>
+    </view>
+  </view>
 </view>

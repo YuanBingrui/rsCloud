@@ -1,0 +1,55 @@
+<view class="section itemDetailContent">
+  <view class="itemDetailBox">
+    <view class="oneItemDetail">
+      <view class="itemLabel">工作日期</view>
+      <picker mode="date" value="{{workdate}}" bindchange="bindDateChange">
+         <view class="itemDetailValue">{{workdate}}</view>
+      </picker>
+    </view>
+    <view class="oneItemDetail">
+      <view class="itemLabel">工时（天）</view>
+      <view class="itemDetailValue"><input value="{{worktime}}" /></view>
+    </view>
+    <view class="oneItemDetail" bindtap="kindSelect">
+      <view class="itemLabel">分类</view>
+      <view class="itemDetailValue">
+        <view>{{kind}}</view>
+        <view>
+          <image src="../../../../../image/icon/selectdown.png"></image>
+        </view>
+      </view>
+    </view>
+    <view class="oneItemDetail" bindtap="workplanSelect">
+      <view class="itemLabel">工作计划</view>
+      <view class="itemDetailValue">
+        <view>{{workplan}}</view>
+        <view>
+          <image src="../../../../../image/icon/selectdown.png"></image>
+        </view>
+      </view>
+    </view>
+    <view class="oneItemDetail">
+      <view class="itemLabel">项目</view>
+      <view class="itemDetailValue">{{project}}</view>
+    </view>
+    <view class="oneItemDetail">
+      <view class="itemLabel">项目任务</view>
+      <view class="itemDetailValue">{{duty}}</view>
+    </view>
+  </view>
+</view>
+<view class="textareaLabel">主题</view>
+<view class="section textareaBox">
+  <textarea value="{{topic}}" auto-height />
+</view>
+<view class="textareaLabel">内容</view>
+<view class="section textareaBox">
+  <textarea value="{{content}}" auto-height />
+</view>
+<view class="textareaLabel">备注</view>
+<view class="section textareaBox">
+  <textarea value="{{bz}}" auto-height />
+</view>
+<view class="btnBox">
+  <button type="primary">提交</button>
+</view>

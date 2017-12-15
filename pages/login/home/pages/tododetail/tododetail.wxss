@@ -1,0 +1,36 @@
+/* tododetail.wxss */
+@import "../../../../common/common.wxss";
+
+.itemDetailHeader{
+  padding: 0 0 0 20rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.itemDetailHeaderIcon{
+  display: flex;
+  justify-content: center;
+}
+.itemDetailHeaderIcon image{
+  width: 80rpx;
+  height: 80rpx;
+}
+.itemDetailHeaderWord{
+  margin-left: 20rpx;
+}
+.itemDetailHeaderWordDate{
+  font-size: 30rpx;
+  color: #999;
+  margin-top: 4rpx;
+}
+.itemMxHeader{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px #D8D8D8 solid;
+  padding-bottom: 20rpx;
+}
+.btnBox{
+  margin: 30rpx 0;
+}

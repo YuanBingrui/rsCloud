@@ -1,0 +1,13 @@
+/* noticedetail.wxss */
+@import "../../../../common/common.wxss";
+
+.noticeHeader{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0 20rpx 0;
+  border-bottom: 2rpx #999 solid;
+}
+.noticeContent{
+  padding: 20rpx 20rpx 0 20rpx;
+}

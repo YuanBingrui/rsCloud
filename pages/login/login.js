@@ -1,64 +1,83 @@
-// pages/login/login.js
-var loginService = require('../../service/login-service.js');
-var tooltips = require('../common/tooltips.js');
-var shareMessage = require('../../service/share-message.js');
+// login.js
+var loginService = require('../../service/login-service.js')
+var tooltips = require('../common/tooltips.js')
 
 Page({
   data: {
     login: {
       entcode: 'rs',
       username: '',
-      password: ''
+      password: '',
+      errorMessage: ''
     },
+    display: true,
     loading: false
   },
 
+  onLoad: function (options) {
+    console.log('onLoad');
+  },
+
+  getUsername: function (e) {
+    if (this.data.display){
+      this.setData({
+        'login.username': e.detail.value
+      })
+    }else{
+      this.setData({
+        display: true,
+        'login.username': e.detail.value
+      })
+    }
+  },
+  getPassword: function (e) {
+    if (this.data.display) {
+      this.setData({
+        'login.password': e.detail.value
+      })
+    } else {
+      this.setData({
+        display: true,
+        'login.password': e.detail.value
+      })
+    }
+  },
+
   submit: function (event) {
-    console.log(event);
     this.setData({
       loading: true
-    });
-    if (event.detail.value.username !== '' && event.detail.value.password !== '') {
-      this.data.login.username = event.detail.value.username;
-      this.data.login.password = event.detail.value.password;
+    })
+    if(this.data.username !== '' && this.data.password !== ''){
       loginService.login(this.data.login).then(res => {
         if (res.data.errcode === 0) {
-          if (res.header['Set-Cookie']) {
-            wx.setStorageSync('cookie', res.header['Set-Cookie'])
-          }
-          loginService.saveLogin(this.data.login);
-          tooltips.showToast(res.data.desc, 'success', '');
+          loginService.saveLogin(this.data.login)
+          tooltips.showToast(res.data.desc,'success','')
           this.setData({
             loading: false
-          });
-          wx.switchTab({
-            url: '../home/home'
-          });
+          })
+          wx.redirectTo({
+            url: './home/home'
+          })
         } else {
-          tooltips.showToast(res.data.desc, '', '../../image/fail.png');
           this.setData({
+            'login.errorMessage': res.data.desc,
+            display: false,
             loading: false
           });
         }
       }).catch(err => {
-        tooltips.showToast(err, '', '../../image/fail.png');
         this.setData({
+          'login.errorMessage': err,
+          display: false,
           loading: false
         });
       })
-    } else {
-      tooltips.showToast('用户名和密码不能为空', '', '../../image/fail.png');
+    }else{
       this.setData({
+        'login.errorMessage': '用户名和密码不能为空',
+        display: false,
         loading: false
-      });
-    }
-  },
-
-  onShareAppMessage: function () {
-    return {
-      title: shareMessage.title,
-      path: shareMessage.path,
-      imageUrl: shareMessage.imageUrl
-    }
-  }
+      });  
+    }   
+  } 
 })

@@ -1,0 +1,67 @@
+<view class="section">
+  <view class="itemDetailHeader">
+    <view class="itemDetailHeaderIcon">
+      <image src="../../../../../image/icon/garcon.png"></image>
+    </view>
+    <view class="itemDetailHeaderWord">
+      <view class="itemDetailHeaderWordDes">{{username}}</view>
+      <view class="itemDetailHeaderWordDate">创建时间{{createDate}}</view> 
+    </view>
+  </view>
+</view>
+<view class="section itemDetailContent">
+  <view class="itemDetailBox">
+    <view class="oneItemDetail">
+      <view class="itemLabel">状态</view>
+      <view class="itemDetailValue">{{status}}</view>
+    </view>
+    <view class="oneItemDetail">
+      <view class="itemLabel">开始日期</view>
+      <view class="itemDetailValue">{{startDate}}</view>
+    </view>
+    <view class="oneItemDetail">
+      <view class="itemLabel">结束日期</view>
+      <view class="itemDetailValue">{{endDate}}</view>
+    </view>
+    <view class="oneItemDetail">
+      <view class="itemLabel">状态名称</view>
+      <view class="itemDetailValue">{{statusName}}</view>
+    </view>
+    <view class="oneItemDetail">
+      <view class="itemLabel">部门名称</view>
+      <view class="itemDetailValue">{{departmentName}}</view>
+    </view>
+    <view class="oneItemDetail">
+      <view class="itemLabel">待处理人</view>
+      <view class="itemDetailValue">{{dclr}}</view>
+    </view>
+    <view class="oneItemDetail">
+      <view class="itemLabel">备注</view>
+      <view class="itemDetailValue">{{bz}}</view>
+    </view>
+  </view>
+</view>
+<view class="section itemDetailContent">
+  <view class="itemMxHeader">---{{mxmc}}---</view>
+  <view class="itemMxContent">
+    <view class="oneItemDetail">
+      <view class="itemLabel">项目实施</view>
+      <view class="itemDetailValue">{{mxXmss}}</view>
+    </view>
+    <view class="oneItemDetail">
+      <view class="itemLabel">内容</view>
+      <view class="itemDetailValue">{{mxContent}}</view>
+    </view>
+    <view class="oneItemDetail">
+      <view class="itemLabel">类型</view>
+      <view class="itemDetailValue">{{mxKind}}</view>
+    </view>
+    <view class="oneItemDetail">
+      <view class="itemLabel">状态</view>
+      <view class="itemDetailValue">{{mxStatus}}</view>
+    </view>
+  </view>
+</view>
+<view class="btnBox">
+  <button type="primary">处理</button>
+</view>

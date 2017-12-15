@@ -1,0 +1,21 @@
+<import src="../../../../common/search/search.wxml" />
+
+<view class="section">
+  <template is="search" data="{{searchStyle}}"/>
+  <block wx:for="{{listArr}}" wx:key="{{item.id}}">
+    <navigator url="../tododetail/tododetail?title={{item.value}}" class="navigator">
+      <view class="itemIcon">
+        <image src="../../../../../image/icon/todoItemIcon.png"></image>
+      </view>
+      <view class="itemContent">
+        <view class="itemTitleBox">
+          <view class="startBox">{{item.value}}</view>
+          <view class="endBox">
+            <view class="dateBox">{{date}}</view>
+          </view>
+        </view>
+        <view class="itemSubTitleBox">{{item.subvalue}}</view>
+      </view>
+    </navigator>  
+  </block>
+</view>

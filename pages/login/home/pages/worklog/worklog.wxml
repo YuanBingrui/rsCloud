@@ -1,0 +1,27 @@
+<import src="../../../../common/search/search.wxml" />
+
+<view class="section">
+  <view class="headerBox">
+    <view class="toolBtnBox">
+      <image src="../../../../../image/icon/add.png" bindtap="addWorklog"></image>
+      <image src="../../../../../image/icon/select.png" bindtap="filterWorklog"></image>
+    </view>
+    <template is="search" data="{{searchStyle}}"/>
+  </view>
+  <block wx:for="{{worklogList}}" wx:key="{{item.id}}">
+    <navigator url="../worklogdetail/worklogdetail?title={{item.value}}" class="navigator">
+      <view class="itemIcon iconBox">
+        <image src="../../../../../image/icon/worklog.png"></image>
+      </view>
+      <view class="itemContent">
+        <view class="itemTitleBox">
+          <view class="startBox">{{item.value}}</view>
+          <view class="endBox">
+            <view class="dateBox">{{date}}</view>
+          </view>
+        </view>
+        <view class="itemSubTitleBox">{{item.subvalue}}</view>
+      </view>
+    </navigator>  
+  </block>
+</view>
