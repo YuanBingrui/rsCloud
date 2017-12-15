@@ -1,2 +1,2 @@
-# rsCloud
-rsCloud weixin mini-program
+# wx-mini-program
+A weixin mini-program project
