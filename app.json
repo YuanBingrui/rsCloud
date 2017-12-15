@@ -4,12 +4,15 @@
     "pages/home/home",
     "pages/todo/todo",
     "pages/todo-detail/todo-detail",
+    "pages/todo-submit/todo-submit",
     "pages/worklog/worklog",
     "pages/worklog-detail/worklog-detail",
-    "pages/about/about",
+    "pages/worklog-filter/worklog-filter",
     "pages/announcement/announcement",
+    "pages/announcement-detail/announcement-detail",
+    "pages/about/about",
     "pages/setting/setting",
-    "pages/announcement-detail/announcement-detail"
+    "pages/todo-persons/todo-persons"
   ],
   "window": {
     "backgroundTextStyle": "light",

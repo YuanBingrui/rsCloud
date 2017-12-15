@@ -53,7 +53,7 @@
   color: #999999;
 }
 .itemContent{
-  margin: 10rpx 0 20rpx 120rpx;
+  margin: 30rpx 0 20rpx 120rpx;
 }
 .viewBtn{
   background-color: #F8F8F8;

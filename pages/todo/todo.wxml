@@ -1,2 +1,48 @@
-<!--pages/todo/todo.wxml-->
-<text>pages/todo/todo.wxml</text>
+<view class="section">
+  <view class="absoluteTop"> 
+    <view class="searchBox" style="box-shadow:{{searchStyle}}">
+      <icon type="search" size="18"/>
+      <input placeholder="搜索" bindinput="queryTodos" bindfocus="addSearchBoxStyle" bindblur="delSearchBoxStyle"/>
+    </view>
+    <view class="topTabBar">
+      <view class="tabbarBox" bindtap="showModal" data-type="category">类别</view>
+      <view class="tabbarBox" bindtap="showModal" data-type="time">时段</view>
+    </view>
+  </view>
+  <block wx:for="{{todos}}" wx:key="{{item.WFAWT_INST}}">
+    <view class="navigator" bindtap="goToTodoDetail" data-item="{{item}}">
+      <view class="itemIcon">
+        <i class="icon-todo"></i>
+      </view>
+      <view class="itemContent">
+        <view class="itemTitleBox">
+          <view class="startBox">{{item.WFDEF_NAME}}</view>
+          <view class="endBox">
+            <view class="dateBox">{{item.WFAWT_BEGIN}}</view>
+          </view>
+        </view>
+        <view class="itemSubTitleBox">{{item.WFAWT_TITLE}}</view>
+      </view>
+    </view>  
+  </block>
+</view>
+<!-- my-modal -->
+<view class="modalBox" wx:if="{{showModal}}">
+  <view class="modalBoxContent">
+    <view class="ratioGroupBox">
+      <radio-group bindchange="radioChange">
+        <view wx:for="{{modalList}}" wx:key="{{item.wFAWT_WFID}}" class="ratioBox">
+          <view>{{item.wFDEF_NAME}}</view>
+          <view>
+            <radio value="{{item.wFAWT_WFID}}" checked="{{item.isChecked}}" color="#0074d9"/>
+          </view>
+        </view>
+      </radio-group>
+    </view> 
+    <view class="hadleBtnBox">
+      <view class="cancelBtn handleBtn" bindtap="cancel">取消</view>
+      <view class="confirmBtn handleBtn" bindtap="confirm">确认</view>
+    </view>
+  </view>
+</view>
+

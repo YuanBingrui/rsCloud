@@ -1,29 +1,13 @@
 @import "../common/common.wxss";
 
-textarea {
-  width: 100%;
+.titlebox{
+  font-size: 30rpx;
   color: #999999;
+  margin-left: 30rpx;
 }
-
-.textareaBox{
-  padding: 20rpx 30rpx;
-  background-color: #fff;
-  min-height:150rpx;
-}
-
-.textareaLabel{
-  margin-top: .77em;
-  margin-bottom: .3em;
-  padding-left: 15px;
-  padding-right: 15px;
-  color: #999999;
-  font-size: 14px; 
-}
-
 .btnBox{
   margin: 30rpx 0;
 }
-
 .btnBox button{
   color: #fff;
   width: 90%;

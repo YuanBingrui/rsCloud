@@ -42,3 +42,60 @@ page {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+.itemDetailValue input{
+  text-align: right;
+}
+
+.boxDown{
+  margin: 20rpx;
+  border-radius: 4rpx;
+}
+.boxHeader{
+  padding: 10rpx 30rpx;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  transition: opacity .3s;
+  font-family:"icon" !important;
+  font-size:50rpx;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.boxHeaderShow {
+  opacity: .2;
+}
+.boxBody {
+  height: 0;
+  overflow: hidden;
+}
+.boxBodyShow {
+  height: auto;
+}
+.boxItem {
+  opacity: 0;
+  position: relative;
+  line-height: 1.41176471;
+  font-size: 34rpx;
+  transform: translateY(-50%);
+  transition: .3s;
+}
+.boxItemshow {
+  opacity: 1;
+  transform: translateY(0);
+}
+.arrow{
+  transition: .3s;
+}
+.arrowUp{
+  transform: rotateZ(180deg)
+}
+.absoluteTop{
+  position: -webkit-sticky; 
+  position:sticky; 
+  top: 0;
+  z-index:100;
+  padding: 20rpx 0 4rpx 0;
+  background-color: #fff;
+}

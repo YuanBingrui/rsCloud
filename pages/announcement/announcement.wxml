@@ -1,7 +1,9 @@
 <view class="section">
-  <view class="searchBox" style="box-shadow:{{searchStyle}}">
-    <icon type="search" size="18"/>
-    <input placeholder="搜索" bindinput="queryAnnouncement" bindfocus="addSearchBoxStyle" bindblur="delSearchBoxStyle"/>
+  <view class="absoluteTop">
+    <view class="searchBox" style="box-shadow:{{searchStyle}}">
+      <icon type="search" size="18"/>
+      <input placeholder="搜索" bindinput="queryAnnouncement" bindfocus="addSearchBoxStyle" bindblur="delSearchBoxStyle"/>
+    </view>
   </view>
   <block wx:for="{{announcementList}}" wx:key="{{item.GGXX_GGID.value}}">
     <view class="navigator" bindtap="goToAnnouncementDetail" data-item="{{item}}">
@@ -10,12 +12,12 @@
       </view>
       <view class="itemContent">
         <view class="itemTitleBox">
-          <view class="startBox">{{item.GGXX_GGBT.value}}</view>
+          <view class="startBox">{{item.GGXX_GGBT}}</view>
           <view class="endBox">
-            <view class="dateBox">{{item.GGXX_WHR.value}}</view>
+            <view class="dateBox">{{item.GGXX_WHR}}</view>
           </view>
         </view>
-        <view class="itemSubTitleBox">{{item.GGXX_FBSJ.value}}</view>
+        <view class="itemSubTitleBox">{{item.GGXX_FBSJ}}</view>
       </view>
     </view>  
   </block>

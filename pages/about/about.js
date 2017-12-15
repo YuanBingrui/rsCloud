@@ -1,4 +1,6 @@
 // pages/about/about.js
+var shareMessage = require('../../service/share-message.js');
+
 Page({
   data: {
 
@@ -39,13 +41,9 @@ Page({
    */
   onShareAppMessage: function (res) {
     return {
-      imageUrl: '../../../../../image/qrcode.png',
-      success: function (res) {
-        console.log(res)
-      },
-      fail: function (res) {
-        console.log(res.err)
-      }
+      title: shareMessage.title,
+      path: shareMessage.path,
+      imageUrl: shareMessage.imageUrl
     }
   }
 })

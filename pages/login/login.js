@@ -1,6 +1,7 @@
 // pages/login/login.js
 var loginService = require('../../service/login-service.js');
 var tooltips = require('../common/tooltips.js');
+var shareMessage = require('../../service/share-message.js');
 
 Page({
   data: {
@@ -25,7 +26,6 @@ Page({
           if (res.header['Set-Cookie']) {
             wx.setStorageSync('cookie', res.header['Set-Cookie'])
           }
-          console.log(wx.getStorageSync('cookie'));
           loginService.saveLogin(this.data.login);
           tooltips.showToast(res.data.desc, 'success', '');
           this.setData({
@@ -56,8 +56,9 @@ Page({
 
   onShareAppMessage: function () {
     return {
-      title: '罗想云',
-      path: '/pages/login/login'
+      title: shareMessage.title,
+      path: shareMessage.path,
+      imageUrl: shareMessage.imageUrl
     }
   }
 })

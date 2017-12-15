@@ -3,7 +3,7 @@
   border-radius: 10rpx;
   width: 96%;
   height: 50rpx;
-  margin: 0 auto;
+  margin: 0 auto 20rpx auto;
   display: flex;
   flex-direction: row;
   align-items: center;

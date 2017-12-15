@@ -1,0 +1,31 @@
+/* pages/todo-submit/todo-submit.wxss */
+@import "../common/common.wxss";
+
+.titlebox{
+  font-size: 30rpx;
+  color: #999999;
+  margin-left: 30rpx;
+}
+textarea {
+  width: 95%;
+  color: #999999;
+  min-height:200rpx;
+  height: 0 !important;
+}
+.textareaBox{
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.handleBtn{
+  margin: 30rpx 0;
+}
+.handleBtn button{
+  color: #fff;
+  width: 90%;
+  height: 70rpx;
+  line-height: 70rpx;
+  font-size: 30rpx;
+  background-color: #0074d9;
+}

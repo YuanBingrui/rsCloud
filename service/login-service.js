@@ -29,7 +29,7 @@ function logout() {
         action: 6
       })
     },
-    header: { 'content-type': 'application/x-www-form-urlencoded' },
+    header: { 'content-type': 'application/x-www-form-urlencoded', 'Cookie': wx.getStorageSync('cookie') },
     method: 'POST'
   }
   return wxRequest.wxRequest(requestObject)
@@ -42,6 +42,24 @@ function autoLogin(){
     console.log(err)
     return { data: { errcode: 'getStorage:fail data not found'}}
   }) 
+}
+
+function getAuthority() {
+  var requestObject = {
+    url: server.serverPrefix + '/rshareapi',
+    data: {
+      action: 9001,
+      params: JSON.stringify({
+        limit: 10,
+        offset: 1,
+        action: 9001,
+        funtype: 13
+      })
+    },
+    header: { 'content-type': 'application/x-www-form-urlencoded', 'Cookie': wx.getStorageSync('cookie') },
+    method: 'POST'
+  }
+  return wxRequest.wxRequest(requestObject)
 }
 
 function saveLogin(login){
@@ -62,5 +80,6 @@ module.exports = {
   logout: logout,
   autoLogin: autoLogin,
   saveLogin: saveLogin,
-  clearLogin: clearLogin
+  clearLogin: clearLogin,
+  getAuthority: getAuthority
 }

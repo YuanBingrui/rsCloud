@@ -1,4 +1,4 @@
-var serverPrefix = "https://oa.roadshare.com/rshare"
+var serverPrefix = "https://www.shangbing.com/wxapp"
 
 function changeServer(newServer){
   this.serverPrefix = newServer

@@ -1,21 +1,27 @@
 <view class="section">
-  <view class="searchBox" style="box-shadow:{{searchStyle}}">
-    <icon type="search" size="18"/>
-    <input placeholder="搜索" bindinput="queryWorklog" bindfocus="addSearchBoxStyle" bindblur="delSearchBoxStyle"/>
+  <view class="headerBox absoluteTop">
+    <view class="toolBtnBox">
+      <i class="toolIcon icon-add" bindtap="addWorklog"></i>
+      <i class="toolIcon icon-filter" bindtap="filterWorklog"></i>
+    </view>
+    <view class="searchBox" style="box-shadow:{{searchStyle}}">
+      <icon type="search" size="18"/>
+      <input placeholder="搜索" bindinput="queryWorklog" bindfocus="addSearchBoxStyle" bindblur="delSearchBoxStyle"/>
+    </view>
   </view>
-  <block wx:for="{{worklogList}}" wx:key="{{item.GGXX_GGID.value}}">
+  <block wx:for="{{worklogList}}" wx:key="{{item.GZRZ_RZID}}">
     <view class="navigator" bindtap="goToWorklogDetail" data-item="{{item}}">
       <view class="itemIcon">
         <i class="icon-worklog"></i>
       </view>
       <view class="itemContent">
         <view class="itemTitleBox">
-          <view class="startBox">{{item.GZRZ_ZT.value}}</view>
+          <view class="startBox">{{item.GZRZ_ZT}}</view>
           <view class="endBox">
-            <view class="dateBox">{{item.GZRZ_GZRQ.value}}</view>
+            <view class="dateBox">{{item.GZRZ_GZRQ}}</view>
           </view>
         </view>
-        <view class="itemSubTitleBox">{{item.GZRZ_RZNR.value}}</view>
+        <view class="itemSubTitleBox">{{item.GZRZ_RZNR}}</view>
       </view>
     </view>  
   </block>

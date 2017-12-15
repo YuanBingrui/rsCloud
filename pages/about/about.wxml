@@ -1,11 +1,11 @@
 <view class="session">
   <view class="topWordBox centerBox">
-    罗想云，专为制造型企业提供信息化管理解决方案
+    尚秉，学习技术永不停息！！！
   </view>
   <view class="imgBox centerBox">
     <image src="../../image/qrcode.png" mode="aspectFit" bindlongpress="actionSheetTap"></image>
   </view>
   <view class="centerBox">
-    扫描二维码，即可下载罗想云手机端！
+    扫描二维码，即可下载尚秉手机端！
   </view>
 </view>

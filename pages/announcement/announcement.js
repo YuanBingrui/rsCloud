@@ -3,6 +3,7 @@ var search = require('../common/search/search.js');
 var moment = require('../../utils/moment.js');
 var announcementService = require('../../service/announcement-service.js');
 var tooltips = require('../common/tooltips.js');
+var shareMessage = require('../../service/share-message.js');
 
 Page({
   data: {
@@ -39,7 +40,7 @@ Page({
         console.log(res.data);
         this.data.sysCount = res.data.body.userdata["sys.count"];
         this.data.offset = this.data.offset + 1;
-        let announcementData = res.data.body.rows;
+        let announcementData = tooltips.rowsDataTrimValueProperty(res.data.body.rows);
         this.data.announcementSession = [].concat(announcementData);
         if (announcementData.length > 0) {
           this.queryAnnouncement();
@@ -52,6 +53,7 @@ Page({
       }
       wx.stopPullDownRefresh();
     }).catch(err => {
+      wx.hideLoading();
       tooltips.showToast(err, '', '../../image/fail.png');
       wx.stopPullDownRefresh();
       console.log(err);
@@ -70,7 +72,7 @@ Page({
         wx.hideLoading();
         if (res.data.errcode === 0) {
           this.data.offset = this.data.offset + 1;
-          let data = res.data.body.rows;
+          let data = tooltips.rowsDataTrimValueProperty(res.data.body.rows);
           this.data.announcementSession = this.data.announcementSession.concat(data);
           if (data.length > 0) {
             this.queryAnnouncement();
@@ -130,8 +132,9 @@ Page({
   
   onShareAppMessage: function () {
     return {
-      title: '罗想云',
-      path: '/pages/login/login'
+      title: shareMessage.title,
+      path: shareMessage.path,
+      imageUrl: shareMessage.imageUrl
     }
   }
 })

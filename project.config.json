@@ -10,7 +10,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "1.6.4",
 	"appid": "wxbc23e0d05be5d24b",
-	"projectname": "rsCloud",
+	"projectname": "rs-oa-wxapp",
 	"condition": {
 		"search": {
 			"current": -1,

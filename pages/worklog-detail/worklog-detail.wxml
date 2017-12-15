@@ -1,2 +1,80 @@
-<!--pages/worklog-detail/worklog-detail.wxml-->
-<text>pages/worklog-detail/worklog-detail.wxml</text>
+<view class="section itemDetailContent">
+  <view class="itemDetailBox">
+    <view class="oneItemDetail">
+      <view class="itemLabel">工作日期</view>
+      <picker mode="date" value="{{worklogContent.GZRZ_GZRQ}}"  bindchange="changeDatetime" disabled="{{disabled}}">
+        <view class="itemDetailValue">{{worklogContent.GZRZ_GZRQ}}</view>
+      </picker> 
+    </view>
+    <view class="oneItemDetail">
+      <view class="itemLabel">工时（天）</view>
+      <view class="itemDetailValue">
+        <input value="{{worklogContent.GZRZ_GS}}" disabled="{{disabled}}" bindinput="changeValue" data-input="GS"/>
+      </view>
+    </view>
+    <view class="oneItemDetail">
+      <view class="itemLabel">分类</view>
+      <picker bindchange="pickerChange" data-type="fl" value="{{flIndex}}" range="{{flArr}}" range-key="value" disabled="{{disabled}}">
+        <view class="itemDetailValue">{{flArr[flIndex].value}}</view>
+      </picker>
+    </view>
+    <view class="oneItemDetail">
+      <view class="itemLabel">工作计划</view>
+      <picker bindchange="pickerChange" data-type="workplan" value="{{workplanIndex}}" range="{{workPlanList}}" range-key="SHOW_VALUE" disabled="{{disabled}}">
+        <view class="itemDetailValue">{{workPlanList[workplanIndex].SHOW_VALUE}}</view>
+      </picker>
+    </view>
+    <view class="oneItemDetail">
+      <view class="itemLabel">项目</view>
+      <view class="itemDetailValue">{{worklogContent.GCXM_XMMC}}</view>
+    </view>
+    <view class="oneItemDetail">
+      <view class="itemLabel">项目任务</view>
+      <view class="itemDetailValue">{{worklogContent.XMRW_SUBJECT}}</view>
+    </view>
+    <view class="oneItemDetail" wx:if="{{showFlag2}}">
+      <view class="itemLabel">状态</view>
+      <view class="itemDetailValue">{{worklogContent.GZRZ_WFPNAME}}</view>
+    </view>
+  </view>
+</view>
+<view class="textareaLabel">主题</view>
+<view class="textareaBox">
+  <textarea disabled="{{disabled}}" bindinput="changeValue" data-input="ZT" value="{{worklogContent.GZRZ_ZT}}" auto-height />
+</view>
+<view class="textareaLabel">内容</view>
+<view class="textareaBox">
+  <textarea disabled="{{disabled}}" bindinput="changeValue" data-input="NR" value="{{worklogContent.GZRZ_RZNR}}" auto-height />
+</view>
+<view class="textareaLabel">备注</view>
+<view class="textareaBox">
+  <textarea disabled="{{disabled}}" bindinput="changeValue" data-input="BZ" value="{{worklogContent.GZRZ_BZ}}" auto-height />
+</view>
+<view class="section itemDetailContent" wx:if="{{showFlag2}}">
+  <view class="itemDetailBox">
+    <view class="oneItemDetail">
+      <view class="itemLabel">维护人</view>
+      <view class="itemDetailValue">{{worklogContent.GZRZ_WHR}}</view>
+    </view>
+    <view class="oneItemDetail">
+      <view class="itemLabel">维护时间</view>
+      <view class="itemDetailValue">{{worklogContent.GZRZ_WHSJ}}</view>
+    </view>
+  </view>
+</view>
+<block wx:if="{{showFlag}}">
+  <view class="btnBox">
+    <button class="btnConfirm" bindtap="editLog" disabled="{{!disabled}}">修改</button>
+  </view>
+  <view class="btnBox">
+    <button class="btnReset" bindtap="deleteLog" disabled="{{!disabled}}">删除</button>
+  </view>
+</block>
+<block wx:if="{{!showFlag}}">
+  <view class="btnBox">
+    <button class="btnConfirm" bindtap="applyWorklog">保存</button>
+  </view>
+  <view class="btnBox">
+    <button class="btnReset" bindtap="dismissWorklog">取消</button>
+  </view>
+</block>

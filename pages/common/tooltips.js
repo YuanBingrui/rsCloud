@@ -26,8 +26,27 @@ function showModal(){
   })
 }
 
+function rowsDataTrimValueProperty(rows) {
+  if (Array.isArray(rows) && rows.length > 0) {
+    let result = [];
+    rows.forEach(item => {
+      let newItem = {};
+      for (let prop in item) {
+        if (item.hasOwnProperty(prop)) {
+          newItem[prop] = item[prop].value;
+        }
+      }
+      result.push(newItem);
+    });
+    return result;
+  }else{
+    return rows;
+  }
+}
+
 module.exports = {
   showToast: showToast,
   showLoading: showLoading,
-  showModal: showModal
+  showModal: showModal,
+  rowsDataTrimValueProperty: rowsDataTrimValueProperty
 }

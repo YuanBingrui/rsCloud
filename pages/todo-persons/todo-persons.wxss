@@ -1,0 +1,21 @@
+/* pages/todo-persons/todo-persons.wxss */
+@import "../common/common.wxss";
+@import "../common/search/search.wxss";
+@import "../common/iconfont/iconfont.wxss";
+
+.btnBox{
+  margin: 30rpx 0;
+}
+.btnBox button{
+  color: #fff;
+  width: 90%;
+  height: 70rpx;
+  line-height: 70rpx;
+  font-size: 30rpx;
+}
+.btnConfirm{
+  background-color: #0074d9;
+}
+.btnCancel{
+  background-color: #E64340;
+}
